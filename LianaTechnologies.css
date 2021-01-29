@@ -1,0 +1,572 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+.upperNav {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-color: rgba(80, 140, 55);
+  }
+
+.upperNav a {
+    color: white;
+    text-align: center;
+    padding: 16px 20px;
+    text-decoration: none;
+    position: absolute;
+    cursor: pointer;
+}
+
+.upperNav select {
+    position: absolute;
+    top: 15px;
+    right: 150px;
+    height: 30px;
+    width: 180px;
+    color: rgba(55, 58, 60);
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.lowerNav {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+.lowerNav a {
+    color: rgb(155, 155, 155);
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.lowerNav input {
+    position: absolute;
+    right: 250px;
+    top: 29px;
+    color: rgb(155, 155, 155);
+    font-size: 16px;
+    padding: 10px;
+    height: 35px;
+    width: 175px;
+}
+
+.lowerNav button {
+    position: absolute;
+    right: 150px;
+    background-color: rgb(80, 140, 55);
+    color: white;
+    font-size: 16px;
+    border:rgb(80, 140, 55);
+    border-radius: 5px;
+    height: 35px;
+    width: 75px;
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    color: white;
+    margin-top: 10px;
+  }
+
+.centered {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.centeredButton {
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 45px;
+    width: 145px;
+    background-color: rgb(80, 140, 55);
+    color: white;
+    border:rgb(80, 140, 55);
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  font-size: 28px;
+    
+}
+
+.flex-container > div {
+    width: 360px;
+    padding: 15px;
+}
+
+.column {
+    position: relative;
+}
+
+.column img {
+    height: 220px;
+    border-radius: 4px;
+    filter: brightness(65%);
+    cursor: pointer;
+}
+
+.column img:hover {
+    filter: brightness(90%);
+  }
+
+.centered1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 230px;
+  height: 80px;
+  position: relative;
+}
+
+.icon i {
+  color: rgb(80, 140,55);
+  font-size: 44px;
+  position: absolute;
+  left: 0;
+  top: 25%;
+}
+
+.numbers h1 {
+    font-size: 38px;
+    font-weight: 300;
+    margin: 0;
+    position: relative;
+    left: 80px;
+    top: 5px;
+    animation: mymove 4s infinite;
+}
+
+@keyframes mymove {
+    from {left: 50px;}
+    to {left: 80px;}
+  }
+
+.numbers p {
+    font-size: 18px;
+    margin: 0;
+    position: absolute;
+    left: 81px;
+    bottom: 5px;
+}
+
+
+
+.news {
+    height: 300px;
+    background-color: rgb(236,238,239);
+    padding: 10px 10px;
+    color: rgba(55, 58, 60);
+}
+
+.news h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.flex-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: flex-end;
+}
+
+.news button {
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    border: none;
+    width: 360px;
+    height: 170px;
+    padding: 15px;
+    margin: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.References {
+    padding: 10px 10px;
+    margin: 15px;
+    color: rgba(55, 58, 60);
+}
+
+.References h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.flex-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+
+.card {
+     height: 375px;
+     width: 265px;
+     border: solid 1px;
+     border-color: rgb(201, 201, 201);
+     border-radius: 4px;
+     margin: 15px;
+     position: relative;
+     text-align: center; 
+    
+}
+
+.card img {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+
+.card hr {
+    margin-block-start: 185px;
+    color: rgb(201, 201,201);
+}
+
+.card h2 {
+    font-size: 18px;
+    color: rgba(55, 58, 60);
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card p {
+    width: 230px;
+    font-size: 14px;
+    color: rgba(55, 58, 60);
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subscribe {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-family: 'Lato', sans-serif;
+}
+
+.subscribe input {
+    width: 420px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(148, 148, 148);
+    border-color: rgb (140, 140,140);
+    padding: 5px;
+}
+
+.subscribe button {
+    background-color: rgb(80, 140, 55);
+    color: white;
+    border:rgb(80, 140, 55);
+    border-radius: 5px;
+    height: 50px;
+    width: 125px;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+footer {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    height: 275px;
+    width: 100%;
+    margin-top: 25px;
+    color: white;
+     
+}
+
+.Line1 {
+    overflow: hidden;
+    height: 80px;
+    vertical-align: bottom;
+}
+
+.Line1 p {
+    font-size: 22px;
+    float:left;
+    position: absolute;
+    left: 140px;
+    margin: 1px 1px;
+    top: 50px;
+}
+
+.Line1menu {
+    position: absolute;
+    float: right;
+    right: 120px;
+    top: 55px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.Line1menu a {
+    padding: 5px;
+}
+
+.Line2 {
+    display: flex;
+    align-items: center;
+    height: 200px;
+}
+
+.Line2 p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    width: 210px;
+    position: absolute;
+    left: 140px;
+
+}
+
+footer button {
+    position: absolute;
+    left: 400px;
+    background-color: rgb(80, 140, 55);
+    color: white;
+    border:rgb(80, 140, 55);
+    border-radius: 5px;
+    height: 40px;
+    width: 110px;
+    cursor: pointer;
+}
+
+.foot-icons {
+    display: flex;
+    position: absolute;
+    right: 120px;
+}
+
+.foot-icons i {
+    background-color: rgb(80, 140, 55);
+    color: white;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    padding: 10px 5px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 1150px) {
+    .upperNav a {
+        position: static!important;
+    }
+
+    .upperNav select {
+        right: 25px;
+        width: 120px;
+    }
+
+    .lowerNav {
+        height: 140px;
+    }
+
+    .lowerNav p {
+        left: 10px!important;
+        top: 10px!important;
+    }
+
+    .lowerNav a {
+        position: static!important;
+        margin-top: 70px;
+    }
+
+    .lowerNav input {
+        right: 70px;
+        top: 40px;
+        width: 75px;
+    }
+
+    .lowerNav button {
+        right: 10px;
+        top: 40px;
+        width: 50px;
+        font-size: 10px;
+    }
+
+    .centered p {
+        font-size: 24px;
+        top: 15%;
+    }
+
+    .centeredButton {
+        bottom: 15%;
+        width: 20%;
+        font-size: 16px;
+    }
+
+    .flex-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .news button{
+        font-size: 14px;
+        width: 230px;
+        height: 150px;
+        padding: 5px 5px;
+    }
+    
+    .card {
+        width: 200px;
+        height: 250px;
+    }
+
+    .card hr {
+        margin-block-start: 125px;
+    }
+
+    .card h2, .card p {
+        font-size: 12px;
+        width: 150px;
+    }
+
+    .Line1 p {
+        font-size: 18px;
+        left: 20px;
+    }
+
+    .Line1menu {
+        right: 20px;
+    }
+    .Line2 p {
+        font-size: 12px;
+        left: 20px;
+    }
+    footer button {
+         left: 250px;
+         height: 30px;
+         width: 90px;
+    }
+    .foot-icons {
+        right: 20px;
+    }
+    
+  }
+
+  @media (max-width: 650px) {
+
+    .centered p {
+        font-size: 14px;
+        width: 250px;
+     }
+
+    .centeredButton {
+        height: 20px;
+        font-size: 10px;
+    }
+    
+    .numbers {
+        flex-direction: column;
+        align-items: center;
+        height: 230px;
+    }
+
+    .news h1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .flex-button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news button {
+        font-size: 12px;
+        width: 300px;
+        height: 70px;
+        margin: 5px 5px;
+    }
+
+    .news button p {
+        font-size: 12px;
+        margin: 1px 1px;
+    }
+
+    .flex-cards {
+        flex-direction: column;
+    }
+
+    .subscribe input {
+        width: 300px;
+    }
+
+    .Line1menu {
+        font-size: 12px;
+        top: 100px;
+    }
+
+    .Line2 p {
+        font-size: 12px;
+        left: 20px;
+    }
+
+    .foot-icons {
+        top: 210px;
+    }
+    
+  }
