@@ -1,78 +1,84 @@
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
+    margin: 0;
   }
 
 * {
     box-sizing: border-box;
 }
 
-.upperNav {
+.upper-nav {
     display: flex;
     align-items: center;
-    position: relative;
+    justify-content: flex-end;
     height: 60px;
     width: 100%;
     background-color: rgba(80, 140, 55);
   }
 
-.upperNav a {
+.upper-nav a {
     color: white;
     text-align: center;
-    padding: 16px 20px;
+    padding: 16px 10px;
     text-decoration: none;
-    position: absolute;
     cursor: pointer;
 }
 
-.upperNav select {
-    position: absolute;
-    top: 15px;
-    right: 150px;
+.upper-nav select {
     height: 30px;
     width: 180px;
     color: rgba(55, 58, 60);
-    background-color: white;
     border: none;
     border-radius: 3px;
     padding: 5px;
 }
 
-.lowerNav {
-    height: 90px;
+.lower-nav {
+    height: 110px;
     width: 100%;
     display: flex;
     align-items: center;
-    position: relative;
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 10px;
 }
 
-.lowerNav a {
-    color: rgb(155, 155, 155);
-    padding: 5px 10px;
-    text-align: center;
-    cursor: pointer;
+.lower-nav-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.lowerNav input {
-    position: absolute;
-    right: 250px;
-    top: 29px;
+.lower-nav-logo img {
+    height: 100px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-right: 30px;
+}
+
+.lower-nav a {
     color: rgb(155, 155, 155);
+    padding: 10px;
+}
+
+.lower-nav input {
     font-size: 16px;
     padding: 10px;
     height: 35px;
-    width: 175px;
+    width: 180px;
+    border-radius: 4px;
+    border: 1px solid rgba(155, 155, 155, 0.5)
 }
 
-.lowerNav button {
-    position: absolute;
-    right: 150px;
+.lower-nav button {
     background-color: rgb(80, 140, 55);
     color: white;
     font-size: 16px;
-    border:rgb(80, 140, 55);
-    border-radius: 5px;
+    font-weight: 300;
+    border: none;
+    border-radius: 4px;
     height: 35px;
     width: 75px;
     cursor: pointer;
@@ -113,7 +119,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  
   text-align: center;
   color: white;
   margin-top: 20px;
@@ -409,164 +414,3 @@ footer button {
     margin: 5px;
     cursor: pointer;
 }
-
-@media (max-width: 1150px) {
-    .upperNav a {
-        position: static!important;
-    }
-
-    .upperNav select {
-        right: 25px;
-        width: 120px;
-    }
-
-    .lowerNav {
-        height: 140px;
-    }
-
-    .lowerNav p {
-        left: 10px!important;
-        top: 10px!important;
-    }
-
-    .lowerNav a {
-        position: static!important;
-        margin-top: 70px;
-    }
-
-    .lowerNav input {
-        right: 70px;
-        top: 40px;
-        width: 75px;
-    }
-
-    .lowerNav button {
-        right: 10px;
-        top: 40px;
-        width: 50px;
-        font-size: 10px;
-    }
-
-    .centered p {
-        font-size: 24px;
-        top: 15%;
-    }
-
-    .centeredButton {
-        bottom: 15%;
-        width: 20%;
-        font-size: 16px;
-    }
-
-    .flex-container {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .news button{
-        font-size: 14px;
-        width: 230px;
-        height: 150px;
-        padding: 5px 5px;
-    }
-    
-    .card {
-        width: 200px;
-        height: 250px;
-    }
-
-    .card hr {
-        margin-block-start: 125px;
-    }
-
-    .card h2, .card p {
-        font-size: 12px;
-        width: 150px;
-    }
-
-    .Line1 p {
-        font-size: 18px;
-        left: 20px;
-    }
-
-    .Line1menu {
-        right: 20px;
-    }
-    .Line2 p {
-        font-size: 12px;
-        left: 20px;
-    }
-    footer button {
-         left: 250px;
-         height: 30px;
-         width: 90px;
-    }
-    .foot-icons {
-        right: 20px;
-    }
-    
-  }
-
-  @media (max-width: 650px) {
-
-    .centered p {
-        font-size: 14px;
-        width: 250px;
-     }
-
-    .centeredButton {
-        height: 20px;
-        font-size: 10px;
-    }
-    
-    .numbers {
-        flex-direction: column;
-        align-items: center;
-        height: 230px;
-    }
-
-    .news h1 {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .flex-button {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .news button {
-        font-size: 12px;
-        width: 300px;
-        height: 70px;
-        margin: 5px 5px;
-    }
-
-    .news button p {
-        font-size: 12px;
-        margin: 1px 1px;
-    }
-
-    .flex-cards {
-        flex-direction: column;
-    }
-
-    .subscribe input {
-        width: 300px;
-    }
-
-    .Line1menu {
-        font-size: 12px;
-        top: 100px;
-    }
-
-    .Line2 p {
-        font-size: 12px;
-        left: 20px;
-    }
-
-    .foot-icons {
-        top: 210px;
-    }
-    
-  }
