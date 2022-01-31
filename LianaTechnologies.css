@@ -35,13 +35,15 @@ body {
 }
 
 .lower-nav {
-    height: 110px;
+    min-height: 110px;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .lower-nav-logo{
@@ -84,27 +86,29 @@ body {
     cursor: pointer;
 }
 
-.container {
+.banner-img {
+    background: url(https://res.cloudinary.com/dmpgjexg4/image/upload/v1643633152/Background_tprvpe.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(85%);
+    height: 420px;
     position: relative;
-    color: white;
-    margin-top: 10px;
-  }
+    background-attachment: fixed;
+    background-position: center;
 
-.centered {
+}
+
+.banner-cont {
+    text-align: center;
     position: absolute;
-    top: 42%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: white;
     font-size: 48px;
-    font-weight: 300;
-    text-align: center;
 }
 
 .centeredButton {
-    position: absolute;
-    bottom: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     height: 45px;
     width: 145px;
     background-color: rgb(80, 140, 55);
@@ -115,18 +119,19 @@ body {
     cursor: pointer;
 }
 
-.flex-container {
+.col-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
+  flex-wrap: wrap;
   color: white;
   margin-top: 20px;
   font-size: 28px;
     
 }
 
-.flex-container > div {
+.col-container > div {
     width: 360px;
     padding: 15px;
 }
@@ -205,7 +210,8 @@ body {
 
 
 .news {
-    height: 300px;
+    height: auto;
+    min-height: 300px;
     background-color: rgb(236,238,239);
     padding: 10px 10px;
     color: rgba(55, 58, 60);
@@ -222,9 +228,10 @@ body {
     flex-direction: row;
     justify-content: center; 
     align-items: flex-end;
+    flex-wrap: wrap;
 }
 
-.news button {
+.news-card {
     text-align: left;
     background-color: rgb(255, 255, 255);
     border-radius: 4px;
@@ -255,6 +262,7 @@ body {
     flex-direction: row;
     justify-content: center; 
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .card {
