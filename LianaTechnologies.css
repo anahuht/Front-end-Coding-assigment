@@ -87,11 +87,10 @@ body {
 }
 
 .banner-img {
-    background: url(https://res.cloudinary.com/dmpgjexg4/image/upload/v1643633152/Background_tprvpe.png);
+    background: url(https://res.cloudinary.com/dmpgjexg4/image/upload/v1643726818/Screenshot_2022-02-01_at_16.42.53_ja3vt2.png);
     background-size: cover;
     background-repeat: no-repeat;
-    filter: brightness(85%);
-    height: 420px;
+    min-height: 420px;
     position: relative;
     background-attachment: fixed;
     background-position: center;
@@ -108,6 +107,11 @@ body {
     font-size: 48px;
 }
 
+ @media (max-width: 768px) {
+    .banner-cont {
+   font-size: 24px;
+ }
+}
 .centeredButton {
     height: 45px;
     width: 145px;
@@ -164,8 +168,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
-  height: 100px;
+  height: auto;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -191,13 +196,9 @@ body {
     position: relative;
     left: 80px;
     top: 5px;
-    animation: mymove 4s infinite;
 }
 
-@keyframes mymove {
-    from {left: 50px;}
-    to {left: 80px;}
-  }
+
 
 .numbers p {
     font-size: 18px;
@@ -313,16 +314,16 @@ body {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 25px;
-    font-family: 'Lato', sans-serif;
 }
 
 .subscribe input {
-    width: 420px;
+    width: 350px;
     height: 50px;
     font-size: 16px;
     font-weight: 300;
     color: rgb(148, 148, 148);
-    border-color: rgb (140, 140,140);
+    border: 1px solid rgb(140, 140, 140);
+    border-radius: 3px;
     padding: 5px;
 }
 
@@ -340,62 +341,50 @@ body {
     cursor: pointer;
 }
 
-footer {
-    position: relative;
+.footer {
     background-color: rgb(0, 0, 0);
-    height: 275px;
+    height: auto;
     width: 100%;
-    margin-top: 25px;
+    margin-top: 20px;
     color: white;
-     
+    padding: 10px;
 }
 
-.Line1 {
-    overflow: hidden;
-    height: 80px;
-    vertical-align: bottom;
+.footer-components {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.Line1 p {
-    font-size: 22px;
-    float:left;
-    position: absolute;
-    left: 140px;
-    margin: 1px 1px;
-    top: 50px;
+.footer-container {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
 }
 
-.Line1menu {
-    position: absolute;
-    float: right;
-    right: 120px;
-    top: 55px;
-    padding: 5px;
+.footer-navigation{
+    text-align: center;
+}
+
+.footer-navigation a{
+    margin: 10px;
     cursor: pointer;
 }
 
-.Line1menu a {
-    padding: 5px;
-}
-
-.Line2 {
+.footer-contacts {
     display: flex;
     align-items: center;
-    height: 200px;
+    gap: 45px;
 }
 
-.Line2 p {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    width: 210px;
-    position: absolute;
-    left: 140px;
-
-}
-
-footer button {
-    position: absolute;
-    left: 400px;
+.footer-contacts button {
     background-color: rgb(80, 140, 55);
     color: white;
     border:rgb(80, 140, 55);
@@ -403,12 +392,6 @@ footer button {
     height: 40px;
     width: 110px;
     cursor: pointer;
-}
-
-.foot-icons {
-    display: flex;
-    position: absolute;
-    right: 120px;
 }
 
 .foot-icons i {

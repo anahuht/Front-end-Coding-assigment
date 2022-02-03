@@ -24,12 +24,16 @@
             </div>
             <div class="lower-nav">
                 <div class="lower-nav-logo">
-                    <img src="https://res.cloudinary.com/dmpgjexg4/image/upload/v1643574438/lianatech_logo_hugxss.svg">
-                    <a>Company</a>
-                    <a>Products</a>
-                    <a>Contact Us</a>
+                    <div>
+                        <img src="https://res.cloudinary.com/dmpgjexg4/image/upload/v1643574438/lianatech_logo_hugxss.svg">
+                    </div>
+                    <div>
+                        <a>Company</a>
+                        <a>Products</a>
+                        <a>Contact Us</a>
+                    </div>
                 </div>
-                <div class="lower-nav-search">
+                <div class="lower-nav-search" style="margin:10px;">
                     <form>
                         <input input type="text" name="search" placeholder="Search">
                         <button>Search</button>
@@ -57,31 +61,53 @@
             <p>Contact us</p></div>
          </div>
     </div>
-    <div class="numbers">
+    <div class="numbers" id="numbers">
         <div class="icon"><i class="fas fa-briefcase"></i>
-        <h1>3000 </h1>
+        <h1 data-target="3000" class="count">  </h1>
         <p>Clients</p></div>
         <div class="icon"><i class="fas fa-smile"></i>
-        <h1>180 </h1>
+        <h1 data-target="180" class="count">  </h1>
         <p>Employees</p></div>
         <div class="icon"><i class="fas fa-globe-americas"></i>
-        <h1>10000 </h1>
+        <h1 data-target="10000" class="count">  </h1>
         <p>Daily users</p></div>
     </div>
+
+    <script>
+        const counters = document.querySelectorAll(".count");
+        const speed = 100;
+
+        counters.forEach((counter) => {
+        const updateCount = () => {
+            const target = parseInt(+counter.getAttribute("data-target"));
+            const count = parseInt(+counter.innerText);
+            const increment = Math.trunc(target / speed);
+
+            if (count < target) {
+            counter.innerText = count + increment;
+            setTimeout(updateCount, 1);
+            } else {
+            count.innerText = target;
+            }
+        };
+        document.getElementById("numbers").addEventListener("mouseover", updateCount);
+});
+    </script>
+
     <div class="news">
         <h1>Latest news</h1>
         <div class="flex-button">
         <div class="news-card">
             <p style="color:rgb(155, 155, 155); font-size: 16px">27.07.2016</p>
-            <p>Liana Technologies and Encode Solutions merge to create unique mobile solutions</p>
+            <p style="text-align:justify">Liana Technologies and Encode Solutions merge to create unique mobile solutions</p>
         </div>
         <div class="news-card">
             <p style="color:rgb(155, 155, 155); font-size: 16px">28.01.2016</p>
-            <p>From a local startup to a global player: Liana Technologies among the forerunners of digital marketing technology</p>
+            <p style="text-align:justify">From a local startup to a global player: Liana Technologies among the forerunners of digital marketing technology</p>
         </div>
         <div class="news-card">
             <p style="color:rgb(155, 155, 155); font-size: 16px">02.07.2015</p>
-            <p>Liana Technologies Hong Kong launched a series of digital marketing events in June</p>
+            <p style="text-align:justify">Liana Technologies Hong Kong launched a series of digital marketing events in June</p>
         </div>
     </div>
     </div>
@@ -117,7 +143,7 @@
     <hr>
     <div class="subscribe">
          <p style="font-size:24px;">Subscribe to our newsletter</p>
-         <p style="font-size:14px;">Follow our story and get the latest promotional news about our products and events.</p>
+         <p style="font-size:14px; margin:10px">Follow our story and get the latest promotional news about our products and events.</p>
          <form id="newsletter" action="/action_page.php">
              <input type="email" name="email" placeholder="Your email address" >
              <button type="button" id="newsletterbtn" onclick="myFunction()">Subscribe</button></form>
@@ -130,30 +156,36 @@
         }
     </script>
 
-    <footer>
-        <div class="Line1">
-             <p>Liana Technologies</p>
-          <div class="Line1menu">
-             <a>Company</a>
-             <a>Products</a>
-             <a>Contact us</a>
-             <a>News</a>
-             <a>Intranet</a>
-          </div>
-            </div>
-        <div class="Line2">
-        <p>
-        <b>Sales and Inqueries</b>
-        <br>Email: sales@lianatech .com            
-        <br>Phone: +358 10 387 7053             
-        </p>
-             <button> Contact us </button>
-             <div class="foot-icons">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-linkedin-in"></i>
+    <div class="footer">
+        <div class="footer-components">
+            <div class="footer-container">
+             <p style="font-size:24px;">Liana Technologies </p>
+                <div class="footer-navigation">
+                    <a>Company</a>
+                    <a>Products</a>
+                    <a>Contact us</a>
+                    <a>News</a>
+                    <a>Intranet</a>
+                </div>
+             </div>
+             <div class="footer-container">
+                <div class="footer-contacts">
+                    <div>
+                    <p> <b>Sales and Inqueries</b> </p>
+                    <p>Email: sales@lianatech.com </p>          
+                    <p>Phone: +358 10 387 7053</p>             
+                    </div>
+                    <div>
+                    <button> Contact us </button>
+                    </div>
+                </div>
+                <div class="foot-icons">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
             </div>
         </div>
-    </footer>
+    </div>
  </body>
 </html>
